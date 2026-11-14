@@ -4,7 +4,7 @@ import path from 'node:path';
 import { initializeDatabase } from './server/db.ts';
 import { apiRouter } from './server/routes.ts';
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const isProd = process.env.NODE_ENV === 'production';
 
 async function startServer() {
